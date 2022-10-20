@@ -20,13 +20,18 @@
         <h2 id="QuestionHolder" class="c-al" placeholder="Questions appear here"></h2>
         <div id="message"></div>
         <ol id="multipleChoice" class="c-al"></ol>
-        <form id="emailForm" style="display: none">
-            Initials: <input type="text" name="email"> 
+        <form id="initialsForm" style="display: none">
+            Initials: <input type="text" name="initials" id="initials"> 
             <div id="submitBtn" class="Btn submit">Submit</div>
         </form>
+        <!-- start button -->
         <button id="startBtn" class="Btn c-al center"></button>
+        <!-- shows the results -->
         <span id="results" class="c-al"></span>
-        
+       <!-- high score buttons -->
+        <button id="goBackBtn" class="Btn c-al center"></button>
+        <button id="resetHighScore" class="Btn c-al center top-m"></button>
+    
     </article>
      <!-- Added link to the jQuery library -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

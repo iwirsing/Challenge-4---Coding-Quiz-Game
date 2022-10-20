@@ -23,9 +23,15 @@ span{
     margin-left:40%;
 }
 
-.submit{
+
+
+.submit .goBackBtn{
     margin-top: 1rem;
     margin-left: 10%;
     background-color: green;
     cursor: pointer;
+}
+
+.top-m{
+    margin-top: 1rem;
 }
