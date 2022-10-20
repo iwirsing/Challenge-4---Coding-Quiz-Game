@@ -142,9 +142,6 @@ function endGame(){
     questionTraverser=0;
     timer=0;
     
-
-    
-    
 }
 
 //function to show high score
@@ -152,11 +149,10 @@ function showHighScore(){
     //clear the other messages
     clearDisplay();
 
-    //display high score
+    //display high score title
     questionHolder.setAttribute("style","text-align:left");
     questionHolder.textContent="Highscore: ";
 
-  
     //retrieve the high score list
     var highScoreRecall=JSON.parse(localStorage.getItem("highScoreList"));
     console.log(highScoreRecall);
@@ -191,7 +187,6 @@ function clearDisplay(){
     choices.textContent=""; //clear the choices where the high score will be displayed as a list
     startButton.setAttribute("style","display:none") //clears the start button
     questionHolder.textContent="";
-    
 }
 
 
@@ -229,8 +224,6 @@ function resetScore(){
     HighScoreStorage=[];
     localStorage.setItem("highScoreList",JSON.stringify(HighScoreStorage));
     showHighScore();
-
-
 }
 
 //initialize page
@@ -244,7 +237,7 @@ function init(){
     goBackButton.setAttribute("style","visibility:hidden");
     resetHighScore.setAttribute("style","visibility:hidden");
 }
-
+//initialize loading page
 init();
 
 //listens for start button
