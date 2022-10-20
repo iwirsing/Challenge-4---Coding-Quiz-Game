@@ -1,0 +1,31 @@
+.Btn{
+    border: 1px solid black;
+    width: fit-content;
+}
+
+span{
+    display: flex;
+    column-gap: 70%;
+}
+
+.c-al{
+    text-align: center;
+    
+}
+
+.centerbox{
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+
+.center{
+    margin-left:40%;
+}
+
+.submit{
+    margin-top: 1rem;
+    margin-left: 10%;
+    background-color: green;
+    cursor: pointer;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/css/normalize.css">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <span>
+    <section id="viewHighScore" class="Btn">View High Score</section>
+    <section id="timer" class="Btn">Timer:<div id="time"></div></section>
+    </span>
+    <article class="centerbox"> 
+        <header>
+            <h1 id="title" class="c-al"></h1>
+        </header>
+        <h2 id="QuestionHolder" class="c-al" placeholder="Questions appear here"></h2>
+        <div id="message"></div>
+        <ol id="multipleChoice" class="c-al"></ol>
+        <form id="emailForm" style="display: none">
+            Initials: <input type="text" name="email"> 
+            <div id="submitBtn" class="Btn submit">Submit</div>
+        </form>
+        <button id="startBtn" class="Btn c-al center"></button>
+        <span id="results" class="c-al"></span>
+        
+    </article>
+     <!-- Added link to the jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script type="text/javascript" src="./Assets/js/script.js"></script>
+</body>
+</html>
