@@ -1,4 +1,4 @@
-# Challenge-4---Coding-Quiz-Game
+# Module 4 Challenge: Coding Quiz Game
 A test on coding knowledge. Can you beat the high score?
 
 source:
