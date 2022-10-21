@@ -22,10 +22,12 @@ var resetHighScore=document.getElementById("resetHighScore");
 var choiceHolder;
 var score;
 var timer;
-var question={};
+var question;
 var questionTraverser=0;
 var numberHighScore=0;
-var HighScoreStorage=[];
+var HighScoreStorage=JSON.parse(window.localStorage.getItem("highScoreList")) || [];
+var HighScorePrev=[];
+
 
 //function for start button
 function StartGame (){
@@ -59,9 +61,9 @@ function countDown(){
         clearInterval(gameTimer);
         endGame();
         Timer.textContent=timer; 
-
     }
-    else { //out of time
+    //out of time
+    else { 
         clearInterval(gameTimer);
         endGame();
         Timer.textContent=timer; 
@@ -95,19 +97,23 @@ document.querySelector('body').addEventListener('click',function(event){
         var answer=event.target.textContent;
         console.log(answer);
         console.log("answer is "+ question[5]);
+        results.setAttribute("style","margin-top=500px;")
         
         
         //check if answer is correct
         if (answer===question[5]){
-            console.log("answer is correct");
-            console.log("correct "+questionTraverser);
+            
             results.textContent=" Your answer is correct. ";
+            console.log("answer is correct");
+            console.log(results);
+            
         }
         else{
+            results.textContent=" Your answer is wrong. ";
             console.log("wrong choice");
             timer=timer-15;
-            console.log("wrong "+questionTraverser);
-            results.textContent=" Your answer is wrong. ";
+            console.log(results);
+            
         }
 
         questionTraverser++;
@@ -155,6 +161,7 @@ function showHighScore(){
 
     //retrieve the high score list
     var highScoreRecall=JSON.parse(localStorage.getItem("highScoreList"));
+    
     console.log(highScoreRecall);
 
     
@@ -162,7 +169,7 @@ function showHighScore(){
     for(var i=0;i<highScoreRecall.length;i++){
         choiceHolder=document.createElement("li");
         choiceHolder.setAttribute("style","text-align:left;display:block");
-        choiceHolder.textContent=highScoreRecall[i].initialSave+"  -  "+highScoreRecall[i].score;
+        choiceHolder.textContent=highScoreRecall[i].initialSave+"  :  "+highScoreRecall[i].score;
         choices.appendChild(choiceHolder);
         console.log(choiceHolder);
     }
@@ -178,7 +185,7 @@ function showHighScore(){
 }
 
 
-//clear display
+//function to clear display
 function clearDisplay(){
     titleContent.textContent=""; //clears title
     messageHolder.textContent="";//clears score message
@@ -187,6 +194,8 @@ function clearDisplay(){
     choices.textContent=""; //clear the choices where the high score will be displayed as a list
     startButton.setAttribute("style","display:none") //clears the start button
     questionHolder.textContent="";
+    goBackButton.setAttribute("style","visibility:hidden"); //hide go back button
+    resetHighScore.setAttribute("style","visibility:hidden");//hide high score
 }
 
 
@@ -204,13 +213,14 @@ function addHighScore(){
         results.textContent=" Initials cannot be blank. ";
     }
     else{
-
+        console.log(HighScorePrev);
         //add object to list of high score array
         HighScoreStorage.push(newScore);
+        // HighScoreStorage.push(HighScorePrev);
 
         //sort the list of high score
         HighScoreStorage.sort((a,b)=>{
-            if (a.score===b.score) return a.initialSave-b.initialSave; //if equal do nothing
+            if (a.score===b.score) return a.initialSave-b.initialSave; //if equal do as the orig order
             return b.score - a.score;
         })
         //save to local storage
@@ -221,21 +231,27 @@ function addHighScore(){
 
 //function to reset High Score
 function resetScore(){
-    HighScoreStorage=[];
+    HighScoreStorage=[]; //remove all contents
     localStorage.setItem("highScoreList",JSON.stringify(HighScoreStorage));
-    showHighScore();
+    showHighScore(); //show now
+    window.localStorage.clear(); //completely empty local storage
 }
 
 //initialize page
 function init(){
+    //clear display
     clearDisplay();
+
+    //get Local storage
+    HighScorePrev=JSON.parse(localStorage.getItem("highScoreList"));
+    console.log(HighScorePrev);
+
+    //display loading page
     titleContent.textContent="Coding Quiz Challenge";
     messageHolder.textContent="Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by 15 seconds.";
     startButton.setAttribute("style","visibility:visible");
     startButton.textContent="Start Quiz";
-    results.textContent="";
-    goBackButton.setAttribute("style","visibility:hidden");
-    resetHighScore.setAttribute("style","visibility:hidden");
+    
 }
 //initialize loading page
 init();
