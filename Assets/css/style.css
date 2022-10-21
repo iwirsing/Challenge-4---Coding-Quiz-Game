@@ -1,12 +1,45 @@
-.Btn{
-    border: 1px solid black;
-    width: fit-content;
+html{height:100%;}
+
+body{
+    background-image: url("../images/codingbg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: bisque;
+    
 }
 
-span{
-    display: flex;
-    column-gap: 70%;
+
+.Btn{
+    /* border: 1px solid black; */
+    height:fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    color:rgb(216, 218, 223);
+    background-color: rgba(90, 67, 201, 0.845);
+    
 }
+
+
+.BtnHover:hover, li:hover{
+    background-color: aquamarine;
+    color:navy;
+    cursor: pointer;
+    width: fit-content;
+    
+}
+
+#startBtn{
+    display: block;
+    margin:auto;
+}
+span{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
 
 .c-al{
     text-align: center;
@@ -14,24 +47,48 @@ span{
 }
 
 .centerbox{
+    background-color: rgba(194, 158, 30, 0.9);
     display: block;
-    width: 50%;
     margin: auto;
+    border-radius: 10px;;
+    width:60%;
+}
+ 
+#title {
+    text-shadow:5px 5px 5px rgba(90, 67, 201);
+    padding-top:5%;
+    
 }
 
+
+#message, #initialsForm,#QuestionHolder, #multipleChoice{
+    margin-left:5%;
+    margin-right:5%;
+}
+
+ol{
+    cursor: pointer;
+}
 .center{
-    margin-left:40%;
+    justify-content: center;
 }
 
 
 
-.submit .goBackBtn{
+.submit, .goBackBtn{
     margin-top: 1rem;
     margin-left: 10%;
-    background-color: green;
     cursor: pointer;
 }
 
-.top-m{
-    margin-top: 1rem;
+.highScoreBtns{
+  
+    display: flex;
+    justify-content: space-around;
 }
+
+.m-auto{
+    margin:1rem;
+    
+}
+

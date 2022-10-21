@@ -9,13 +9,15 @@
     <title>Document</title>
 </head>
 <body>
+
     <span>
-    <!-- view high score button -->
-    <section id="viewHighScore" class="Btn">View High Score</section>
-    <!-- shows timer countdown -->
-    <section id="timer" class="Btn">Timer:<div id="time"></div></section>
+    <!-- view high score button, this will be on the left because of flex and space between in css-->
+    <button id="viewHighScore" class="Btn BtnHover" style="background-color: rgb(255,255,255,255,0.7)">View High Score</button>
+    <!-- shows timer countdown, this will be on the right -->
+    <button id="timer" class="Btn" style="margin-right:2rem">Timer: <time id="time">75</time></button>
     </span>
-    <article class="centerbox"> 
+
+    <main class="centerbox" id="centerbox"> 
         <header>
             <!-- main title for the loading page -->
             <h1 id="title" class="c-al"></h1>
@@ -33,24 +35,21 @@
             <!-- initials input -->
             Initials: <input type="text" name="initials" id="initials"> 
             <!-- submit button -->
-            <div id="submitBtn" class="Btn submit">Submit</div>
+            <button id="submitBtn" class="Btn BtnHover submit">Submit</button>
         </form>
 
         <!-- start button -->
-        <button id="startBtn" class="Btn c-al center"></button>
-
+        <button id="startBtn" class="Btn BtnHover c-al center"></button>
+        <hr id="line">
         <!-- shows the results -->
-        <span id="results" class="c-al"></span>
+        <div id="results" class="c-al"></div>
 
        <!-- high score buttons -->
-        <button id="goBackBtn" class="Btn c-al center"></button>
-        <button id="resetHighScore" class="Btn c-al center top-m"></button>
-    
-    </article>
-    
-     <!-- Added link to the jQuery library -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
+        <p class="highScoreBtns">
+            <button id="goBackBtn" class="Btn BtnHover c-al m-auto"></button>
+            <button id="resetHighScore" class="Btn BtnHover c-al  m-auto"></button>
+        </p>
+    </main>
     <script type="text/javascript" src="./Assets/js/script.js"></script>
 </body>
 </html>
