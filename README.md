@@ -28,9 +28,11 @@ Coding quiz link: https://iwirsing.github.io/Module-4-Challenge-Coding-Quiz-Game
 ## <u>Screenshot</u>
 1. Loading Page
 ![loading page](./Assets/images/loading%20page.png)
-2. Questions Page
+2. Questions Section
 ![questions page](./Assets/images/question%20page.png)
-3. High Score Page
+3. Save High Score Section
+![save high score section](./Assets/images/save%20high%20score%20section.png)
+3. High Score Section
 ![high score](./Assets/images/high%20score%20page.png)
 
 ## <u>Sources:</u>
