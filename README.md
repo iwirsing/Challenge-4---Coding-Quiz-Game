@@ -5,7 +5,7 @@ A test on coding knowledge. Can you beat the high score?
 1. [Link to Deployed Page](#deployed-page)
 2. [Game Features](#game-features)
 3. [Future Possible Improvements](#future-possible-improvements)
-4. [Screenshot](#screenshot)
+4. [Screenshot](#screenshots))
 5. [Sources](#sources) 
 
 ## <u>Deployed Page</u>
@@ -25,7 +25,7 @@ Coding quiz link: https://iwirsing.github.io/Module-4-Challenge-Coding-Quiz-Game
 3. Mix up how choices are displayed.
 
 
-## <u>Screenshot</u>
+## <u>Screenshots</u>
 1. Loading Page
 ![loading page](./Assets/images/loading%20page.png)
 2. Questions Section
