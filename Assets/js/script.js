@@ -41,6 +41,10 @@ function init(){
     HighScorePrev=JSON.parse(localStorage.getItem("highScoreList"));
     console.log(HighScorePrev);
 
+     //timer value initialized
+     timer=75;
+     Timer.textContent=timer; 
+
     //display loading page
     titleContent.textContent="Coding Quiz Challenge";
     messageHolder.textContent="Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by 15 seconds.";
@@ -63,9 +67,6 @@ function StartGame (){
 }
 //Function 3: TIMER
 function countDown(){
-    //timer value initialized
-    timer=75;
-    
     //start timer
     var gameTimer=setInterval(function(){
    
