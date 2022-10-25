@@ -224,7 +224,7 @@ function showHighScore(){
     for(var i=0;i<highScoreRecall.length;i++){
         choiceHolder=document.createElement("li");
         choiceHolder.setAttribute("style","text-align:left;display:block");
-        choiceHolder.textContent=highScoreRecall[i].initialSave+"  :  "+highScoreRecall[i].score;
+        choiceHolder.textContent=highScoreRecall[i].score+' - '+ highScoreRecall[i].initialSave;
         choices.appendChild(choiceHolder);
     }}
 

@@ -4,11 +4,11 @@ A test on coding knowledge. Can you beat the high score?
 This challenge employs the use of HTML, CSS and JavaScript to create an interactive quiz game.
 
 ## <u>Table of Contents</u>
-1. [Link to Deployed Page](#deployed-page)
-2. [Game Features](#game-features)
-3. [Future Possible Improvements](#future-possible-improvements)
-4. [Screenshot](#screenshots)
-5. [Sources](#sources) 
+1. [Link to Deployed Page](#udeployed-pageu)
+2. [Game Features](#ugame-featuresu)
+3. [Future Possible Improvements](#ufuture-possible-improvementsu)
+4. [Screenshot](#uscreenshotsu)
+5. [Sources](#usourcesu) 
 
 ## <u>Deployed Page</u>
 
@@ -41,7 +41,7 @@ Coding quiz link: https://iwirsing.github.io/Module-4-Challenge-Coding-Quiz-Game
 3. Save High Score Section
 ![save high score section](./Assets/images/save%20high%20score%20section.png)
 3. High Score Section
-![high score](./Assets/images/high%20score%20page.png)
+![high score](./Assets/images/highscore-2.png)
 
 ## <u>Sources:</u>
 
