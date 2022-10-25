@@ -14,15 +14,15 @@ Coding quiz link: https://iwirsing.github.io/Module-4-Challenge-Coding-Quiz-Game
 
 ## <u>Game Features</u> 
 1. The coding quiz begins at the loading page with the timer set at 75. It has a background picture with 0s and 1s to reflect computer language.
-2. The start game begins the game with a countdown from 75 and the rendering of questions and choices. The selection of answers employs hover properties for improved visibility. The next question only loads when the user has chosen an answer.
-3. When the user chooses an answer, feedback is given right away: right choice or wrong choice. When it is wrong, 15 seconds is deducted from the timer and the correct answer will also be displayed.
-4. When all the five questions are answered, the game ends, the remaining time becomes the score and the user can then store this score with their initials in the high score section. 
-5. The high score section can be accessed from the loading page without playing the game. This section also has a reset button.
+2. A SPECIAL added feature to the challenge is that question sets are randomly chosen every time the page is initialized for added variety and interest to the game.
+3. The start game begins the game with a countdown from 75 and the rendering of questions and choices. The selection of answers employs hover properties for improved visibility. The next question only loads when the user has chosen an answer.
+4. When the user chooses an answer, feedback is given right away: right choice or wrong choice. When it is wrong, 15 seconds is deducted from the timer and the correct answer will also be displayed.
+5. When all the five questions are answered, the game ends, the remaining time becomes the score and the user can then store this score with their initials in the high score section. 
+6. The high score section can be accessed from the loading page without playing the game. This section also has a reset button.
 
 ## <u>Future Possible Improvements</u>
 1. Increase the number of questions in the quiz.
-2. Create randomly chosen question sets to potentially increase variety and element of surprise to the user.
-3. Mix up how choices are displayed.
+2. Mix up how choices are displayed.
 
 
 ## <u>Screenshots</u>

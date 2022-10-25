@@ -1,10 +1,26 @@
-var questionsArray=[
-    ["String values must be enclosed with","square brackets","parenthesis","commas","apostrophes","apostrophes"],
-    ["Which of the following is not an operator ","+","x","^","-","x"],
-    ["What is the meaning of DOM? ","Domain Organizing Management","Kingdom","Document Object Model","Data Option Model","Document Object Model"],
-    ["What is not a JavaScript data type? ","Switch","String","Number","Undefined","String"],
-    ["In which element do we attach the JavaScript file?","<body>","<script>","<div>","<link>","<script>"]
+//array of array of array contains the ff: question, first choice, second choice, third choice, fourth choice and answer
+var multipleArrayOfQuestions=[
+    [
+        ["String values must be enclosed with","square brackets","parenthesis","commas","apostrophes","apostrophes"],
+        ["Which of the following is not an operator ","+","x","^","-","x"],
+        ["What is the meaning of DOM? ","Domain Organizing Management","Kingdom","Document Object Model","Data Option Model","Document Object Model"],
+        ["What is not a JavaScript data type? ","Switch","String","Number","Undefined","String"],
+        ["In which element do we attach the JavaScript file?","<body>","<script>","<div>","<link>","<script>"]],
+    [
+        ["What are not text formatting tags in HTML?","<p>","<br>","<button>","<b>","<button>"],
+        ["What is part of a table tag? ","<th>","<hr>","<li>","<ol>","<th>"],
+        ["Which selector matches a specific element only when it is inside another element? ","Type Selector","Universal Selector","Descendant Selector","Class Selector","Descendant Selector"],
+        ["What value in cursor styling shows a pointing hand? ","crosshair","move","default","pointer","pointer"],
+        ["Which operator compares values and types in JavaScript?","===","==","*","%","==="]],
+    [
+        ["What does isNaN function do?","returns true if the argument is a number","returns true if the argument is not a number","checks if it is an integer","checks if the value is random","returns true if the argument is not a number"],
+        ["Which symbol is used for comments in JavaScript? ","//","![]","=>","<-->","//"],
+        ["What element is responsible for making text bold in HTML? ","<pre>","<a>","<b>","<br>","<b>"],
+        ["What tag is used to make underlined text? ","<ul>","<li>","<pre>","<u>","<u>"],
+        ["What property in CSS is used to change the color of text?","text color","color","background-color","rgb color","color"]]
 ]
+
+
 //initialize variables that captures HTML elements
 var choices=document.getElementById("multipleChoice");
 var goBackButton=document.getElementById("goBackBtn");
@@ -21,14 +37,17 @@ var titleContent=document.getElementById("title");
 var ViewHighScore=document.getElementById("viewHighScore");
 
 //initialize the other global variables
+
 var choiceHolder;
 var HighScoreStorage=JSON.parse(window.localStorage.getItem("highScoreList")) || [];
 var HighScorePrev=[];
 var numberHighScore=0;
 var question;
+var questionsArray=[];//stores chosen set of questions
 var questionTraverser=0;
 var score;
 var timer;
+
 
 //Function 1: LOADING PAGE
 //initialize page
@@ -50,10 +69,17 @@ function init(){
     messageHolder.textContent="Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by 15 seconds.";
     startButton.setAttribute("style","visibility:visible");
     startButton.textContent="Start Quiz";
+
+    //select question set randomly
+    questionsArray=multipleArrayOfQuestions[Math.floor(Math.random()*multipleArrayOfQuestions.length)];
+    console.log(questionsArray);
     
 }
 //Function 2: START BUTTON
 function StartGame (){
+   
+
+
     //start timer
     countDown();
 
