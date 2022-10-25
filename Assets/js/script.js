@@ -78,8 +78,6 @@ function init(){
 //Function 2: START BUTTON
 function StartGame (){
    
-
-
     //start timer
     countDown();
 
@@ -222,6 +220,7 @@ document.querySelector('body').addEventListener('click',function(event){
 function showHighScore(){
     //clear the other messages
     clearDisplay();
+    results.setAttribute("style","display:none");
 
     //display high score title
     questionHolder.setAttribute("style","text-align:left");

@@ -16,10 +16,15 @@ Coding quiz link: https://iwirsing.github.io/Module-4-Challenge-Coding-Quiz-Game
 
 ## <u>Game Features</u> 
 1. The coding quiz application begins with the loading page. The timer is set at 75 seconds. The background picture with 0s and 1s is chosen to reflect computer language.
+
 2. A SPECIAL added feature to this challenge is that question sets are randomly chosen every time the page is initialized. This increases variety to the game.
+
 3. When the game starts, the countdown from 75 seconds begins. The questions and choices will be rendered. The selection of answers employs hover properties for improved visibility. The next question only loads when the user has chosen an answer.
+
 4. When the user chooses an answer, feedback is given right after whether is is the right choice or the wrong choice. When it is the wrong choice, 15 seconds is deducted from the timer and the correct answer will also be displayed.
-5. When all the five questions have been answered, the game ends. The time left becomes the score and the user can then store this score with their initials in the high score section. 
+
+5. When all the five questions have been answered, the game ends. The time left becomes the score and the user can then store this score with their initials in the high score section. The page will notify user to not leave the initials blank when user submits with an empty initials input.
+
 6. The high score section can be accessed from the loading page without playing the game. This section also has a reset button that deletes the stored data in the localStorage.
 
 ## <u>Future Possible Improvements</u>
