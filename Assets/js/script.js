@@ -58,7 +58,6 @@ function init(){
 
     //get Local storage
     HighScorePrev=JSON.parse(localStorage.getItem("highScoreList"));
-    console.log(HighScorePrev);
 
      //timer value initialized
      timer=75;
@@ -72,8 +71,6 @@ function init(){
 
     //select question set randomly
     questionsArray=multipleArrayOfQuestions[Math.floor(Math.random()*multipleArrayOfQuestions.length)];
-    console.log(questionsArray);
-    
 }
 //Function 2: START BUTTON
 function StartGame (){
@@ -86,7 +83,6 @@ function StartGame (){
         
     //capture first question
     question=questionsArray[questionTraverser];
-    console.log(question);
     renderQuestion(question);
 }
 //Function 3: TIMER
@@ -172,8 +168,6 @@ document.querySelector('body').addEventListener('click',function(event){
     if((event.target.tagName.toLowerCase()==='li')&&(timer>0)){
         //capture answer in the variable
         var answer=event.target.textContent;
-        console.log(answer);
-        console.log("answer is "+ question[5]);
         
         //display the results and the horizontal rule
         hrCapture.setAttribute("style","visibility:visible");
@@ -182,15 +176,12 @@ document.querySelector('body').addEventListener('click',function(event){
         //check if answer is correct
         if (answer===question[5]){
             results.textContent=" You are correct. ";
-            console.log("answer is correct");
-            console.log(results);
+
         }
         //else wrong answer and then display the answer
         else{
             results.textContent=" Wrong choice made. The correct choice is "+question[5]+".";
-            console.log("wrong choice");
             timer=timer-15;
-            console.log(results);
         }
 
         //hide the answer results after 1.5 seconds
@@ -205,7 +196,6 @@ document.querySelector('body').addEventListener('click',function(event){
 
         //choose the next question
         question=questionsArray[questionTraverser];
-        console.log(question);
         renderQuestion(question);
             
     }
@@ -228,8 +218,6 @@ function showHighScore(){
 
     //retrieve the high score list
     var highScoreRecall=JSON.parse(localStorage.getItem("highScoreList"));
-    
-    console.log(highScoreRecall);
 
     if (highScoreRecall!==null){ //make sure the array is not null
     //populate sorted high score
@@ -238,7 +226,6 @@ function showHighScore(){
         choiceHolder.setAttribute("style","text-align:left;display:block");
         choiceHolder.textContent=highScoreRecall[i].initialSave+"  :  "+highScoreRecall[i].score;
         choices.appendChild(choiceHolder);
-        console.log(choiceHolder);
     }}
 
     //show go back to start button
@@ -267,7 +254,6 @@ function addHighScore(){
         results.textContent=" Initials cannot be blank. ";
     }
     else{
-        console.log(HighScorePrev);
         //hide  results message
         results.setAttribute("style","display:none");
 
