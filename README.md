@@ -7,7 +7,7 @@ This challenge employs the use of HTML, CSS and JavaScript to create an interact
 1. [Link to Deployed Page](#deployed-page)
 2. [Game Features](#game-features)
 3. [Future Possible Improvements](#future-possible-improvements)
-4. [Screenshot](#screenshots))
+4. [Screenshot](#screenshots)
 5. [Sources](#sources) 
 
 ## <u>Deployed Page</u>
