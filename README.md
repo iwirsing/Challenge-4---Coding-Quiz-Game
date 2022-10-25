@@ -1,6 +1,8 @@
 # Module 4 Challenge: Coding Quiz Game
 A test on coding knowledge. Can you beat the high score?
 
+This challenge employs the use of HTML, CSS and JavaScript to create an interactive quiz game.
+
 ## <u>Table of Contents</u>
 1. [Link to Deployed Page](#deployed-page)
 2. [Game Features](#game-features)
@@ -13,16 +15,17 @@ A test on coding knowledge. Can you beat the high score?
 Coding quiz link: https://iwirsing.github.io/Module-4-Challenge-Coding-Quiz-Game/ 
 
 ## <u>Game Features</u> 
-1. The coding quiz begins at the loading page with the timer set at 75. It has a background picture with 0s and 1s to reflect computer language.
-2. A SPECIAL added feature to the challenge is that question sets are randomly chosen every time the page is initialized for added variety and interest to the game.
-3. The start game begins the game with a countdown from 75 and the rendering of questions and choices. The selection of answers employs hover properties for improved visibility. The next question only loads when the user has chosen an answer.
-4. When the user chooses an answer, feedback is given right away: right choice or wrong choice. When it is wrong, 15 seconds is deducted from the timer and the correct answer will also be displayed.
-5. When all the five questions are answered, the game ends, the remaining time becomes the score and the user can then store this score with their initials in the high score section. 
-6. The high score section can be accessed from the loading page without playing the game. This section also has a reset button.
+1. The coding quiz application begins with the loading page. The timer is set at 75 seconds. The background picture with 0s and 1s is chosen to reflect computer language.
+2. A SPECIAL added feature to this challenge is that question sets are randomly chosen every time the page is initialized. This increases variety to the game.
+3. When the game starts, the countdown from 75 seconds begins. The questions and choices will be rendered. The selection of answers employs hover properties for improved visibility. The next question only loads when the user has chosen an answer.
+4. When the user chooses an answer, feedback is given right after whether is is the right choice or the wrong choice. When it is the wrong choice, 15 seconds is deducted from the timer and the correct answer will also be displayed.
+5. When all the five questions have been answered, the game ends. The time left becomes the score and the user can then store this score with their initials in the high score section. 
+6. The high score section can be accessed from the loading page without playing the game. This section also has a reset button that deletes the stored data in the localStorage.
 
 ## <u>Future Possible Improvements</u>
-1. Increase the number of questions in the quiz.
+1. Increase the number of questions in the quiz as well as the time.
 2. Mix up how choices are displayed.
+3. Change up how scoring is done like adding points for correct answers.
 
 
 ## <u>Screenshots</u>
